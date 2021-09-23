@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel='stylesheet' type='text/css' href='style.css'>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -14,4 +15,27 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    var a = document.getElementsByClassName('fileBox_file');
+    for(var i = 0; i < 10; i++) {
+      if(a[i].innerHTML.slice(-3) == 'svg') {
+        a[i].classList.add('file');
+      }
+    }
+    var b = document.getElementsByClassName('file');
+    for(var i = 0; i < 4; i++) {
+      b[i].classList.remove('fileBox_file');
+    }
+    var a = document.getElementsByClassName('fileBox_file');
+    for(var i = 0; i < 7; i++) {
+      if(a[i].innerHTML.slice(-4) == 'jpeg' | a[i].innerHTML.slice(-3) == 'png' | a[i].innerHTML.slice(-3) == 'jpg') {
+        a[i].classList.add('file_2');
+      }
+    }
+    var b = document.getElementsByClassName('file_2');
+    for(var i = 0; i < 3; i++) {
+      b[i].classList.remove('fileBox_file');
+    }
+     
+  </script>
 </html>

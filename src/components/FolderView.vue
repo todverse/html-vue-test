@@ -1,5 +1,7 @@
 <template>
-  <p class="folder">{{name}}</p>
+
+  <p class="folderBox_folder">{{name}}</p>
+
   <template v-for="folder in folders">
     <FolderView :name="folder.name" :folders="folder.folders" :files="folder.files"/>
   </template>
@@ -23,7 +25,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.folder{
+.folderBox_folder{
+  border: 1px solid black;
+  width: 200px;
+  margin-left: 300px;
+  text-align: center;
   color: orangered;
 }
 </style>

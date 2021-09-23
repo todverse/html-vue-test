@@ -1,15 +1,21 @@
 <template>
+<div class='container'>
+  
   <FolderView name="$" :folders="folders" :files="files" />
+  
+</div>
 </template>
 
 <script>
 import FolderView from './components/FolderView.vue'
+import FileView from './components/FileView.vue'
 import data from './data/list';
 
 export default {
   name: 'App',
   components: {
-    FolderView
+    FolderView,
+    FileView
   },
   data: () => data
 }
